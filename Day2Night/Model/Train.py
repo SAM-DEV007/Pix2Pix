@@ -126,7 +126,7 @@ if __name__ == '__main__':
     test_dataset = test_dataset.map(load_image_test)
     test_dataset = test_dataset.batch(BATCH_SIZE)
     
-    checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt_d2n")
+    checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
     checkpoint = tf.train.Checkpoint(generator_optimizer=Model.generator_optimizer,
                                     discriminator_optimizer=Model.discriminator_optimizer,
                                     generator=Model.generator,
